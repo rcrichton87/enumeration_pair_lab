@@ -19,7 +19,7 @@ describe('My Enumeration Library', function() {
     }), { name: "Ringo", instrument: "drums" } )
   });
 
-  xit("can map an array (to doubles of the items)", function() {
+  it("can map an array (to doubles of the items)", function() {
     assert.deepEqual( myEnumLib.map( testArrayOfNumbers, function( number ) {
       return number * 2;
     }), [ 2, 4, 6, 8, 10, 12 ])

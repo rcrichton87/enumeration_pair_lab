@@ -19,6 +19,14 @@ Enumeration.prototype = {
       }
     } );
     return found;
+  },
+
+  map: function(array, inputFunction){
+    var outputArray = [];
+    array.forEach(function(element){
+      outputArray.push(inputFunction(element));
+    })
+    return outputArray;
   }
   
 
