@@ -43,6 +43,12 @@ Enumeration.prototype = {
     var filteredArray;
     filteredArray = this.filter(array, inputFunction);
     return (filteredArray.length > 0);
+  },
+
+  every: function(array, inputFunction){
+    var filteredArray;
+    filteredArray = this.filter(array, inputFunction);
+    return (filteredArray.length === array.length);
   }
   
 

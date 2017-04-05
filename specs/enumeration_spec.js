@@ -40,7 +40,7 @@ describe('My Enumeration Library', function() {
     }), false );
   });
 
-  xit("returns true if *every* element meets a condition", function() {
+  it("returns true if *every* element meets a condition", function() {
     assert.equal( myEnumLib.every( testArrayOfNumbers, function( number ) {
       return number > 0;
     }), true )
