@@ -37,6 +37,12 @@ Enumeration.prototype = {
       }
     })
     return outputArray;
+  },
+
+  some: function(array, inputFunction){
+    var filteredArray;
+    filteredArray = this.filter(array, inputFunction);
+    return (filteredArray.length > 0);
   }
   
 

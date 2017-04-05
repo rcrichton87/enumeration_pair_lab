@@ -31,7 +31,7 @@ describe('My Enumeration Library', function() {
     }), [ 2, 4, 6 ])
   });
 
-  xit("returns true if *some* elements meet a condition", function() {
+  it("returns true if *some* elements meet a condition", function() {
     assert.equal( myEnumLib.some( testArrayOfNumbers, function( number ) {
       return number > 3;
     }), true );
