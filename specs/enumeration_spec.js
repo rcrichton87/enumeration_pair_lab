@@ -25,7 +25,7 @@ describe('My Enumeration Library', function() {
     }), [ 2, 4, 6, 8, 10, 12 ])
   });
 
-  xit("can filter an array (to only even numbers)", function() {
+  it("can filter an array (to only even numbers)", function() {
     assert.deepEqual( myEnumLib.filter( testArrayOfNumbers, function( number ) {
       return number % 2 === 0;
     }), [ 2, 4, 6 ])

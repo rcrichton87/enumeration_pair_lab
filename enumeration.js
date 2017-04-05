@@ -27,6 +27,16 @@ Enumeration.prototype = {
       outputArray.push(inputFunction(element));
     })
     return outputArray;
+  },
+
+  filter: function(array, inputFunction) {
+    var outputArray = [];
+    array.forEach(function(element) {
+      if (inputFunction(element) === true) {
+        outputArray.push(element);
+      }
+    })
+    return outputArray;
   }
   
 
