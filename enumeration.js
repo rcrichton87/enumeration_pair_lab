@@ -2,18 +2,9 @@ var Enumeration = function() {}
 
 Enumeration.prototype = {
 
-  // find: function(array, searchThing){
-  //   var found;
-  //   array.forEach(function(arrayThing){
-  //     if(arrayThing === searchThing){
-  //       found = arrayThing;
-  //     }
-  //   })
-  //   return found;
-
   find: function (array, inputFunction) {
     var found;
-    array.forEach(function(element){
+    this.ourForEach(array, function(element){
       if (inputFunction(element) === true){
         found = element;
       }
@@ -23,7 +14,7 @@ Enumeration.prototype = {
 
   map: function(array, inputFunction){
     var outputArray = [];
-    array.forEach(function(element){
+    this.ourForEach(array, function(element){
       outputArray.push(inputFunction(element));
     })
     return outputArray;
@@ -31,7 +22,7 @@ Enumeration.prototype = {
 
   filter: function(array, inputFunction) {
     var outputArray = [];
-    array.forEach(function(element) {
+    this.ourForEach(array, function(element) {
       if (inputFunction(element) === true) {
         outputArray.push(element);
       }
@@ -53,10 +44,16 @@ Enumeration.prototype = {
 
   reduce: function(array, inputFunction){
     var total = 0;
-    array.forEach(function(element){
+    this.ourForEach(array, function(element){
       total = inputFunction(total, element);
     })
     return total;
+  },
+
+  ourForEach: function(array, inputFunction){
+    for(i = 0; i < array.length; i++){
+      inputFunction(array[i]);
+    }
   }
   
 
