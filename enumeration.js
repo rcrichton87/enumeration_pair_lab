@@ -49,6 +49,14 @@ Enumeration.prototype = {
     var filteredArray;
     filteredArray = this.filter(array, inputFunction);
     return (filteredArray.length === array.length);
+  },
+
+  reduce: function(array, inputFunction){
+    var total = 0;
+    array.forEach(function(element){
+      total = inputFunction(total, element);
+    })
+    return total;
   }
   
 
